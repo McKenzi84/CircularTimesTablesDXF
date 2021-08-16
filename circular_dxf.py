@@ -55,7 +55,7 @@ for x in range(m):
      
 msp.add_circle(center=(0,0), radius=r)
 
-doc.saveas('ctt.dxf')
+doc.saveas('ctt.dxf')  # save to .dxf file
 
 fig = plt.figure()
 ax = fig.add_axes([0, 0, 1, 1])
