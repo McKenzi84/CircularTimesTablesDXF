@@ -55,11 +55,13 @@ for x in range(m):
      
 msp.add_circle(center=(0,0), radius=r)
 
+doc.saveas('ctt.dxf')
+
 fig = plt.figure()
 ax = fig.add_axes([0, 0, 1, 1])
 #ax = fig.subplots(111)
 ctx = RenderContext(doc)
 out = MatplotlibBackend(ax)
 Frontend(ctx, out).draw_layout(doc.modelspace(), finalize=True)
-#fig.savefig(DIR /'your.png', dpi=300)       
+#fig.savefig(DIR /'your.png', dpi=300)    # uncomment this line to save plot to .png   
 plt.show()
