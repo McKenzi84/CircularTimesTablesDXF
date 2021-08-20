@@ -36,7 +36,7 @@ class Window(QDialog):
     # action called by thte push button
 
     def embedded_plot(self):
-        lines = 50
+        lines = 25
         m = 50
         n = 2
         r = 10
