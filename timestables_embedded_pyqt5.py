@@ -21,10 +21,7 @@ class Window(QDialog):
         self.canvas = FigureCanvas(self.figure)
         self.toolbar = NavigationToolbar(self.canvas, self)
         self.button = QPushButton('Plot')
-        self.lines = QLineEdit('10')
-        self.radius = QLineEdit('10')
-        self.factor = QLineEdit('10')
-        self.label = QLabel('Radi')
+       
         self.button.clicked.connect(self.embedded_plot)
  
         self.layout1 = QVBoxLayout()
@@ -32,20 +29,17 @@ class Window(QDialog):
         self.layout1.addWidget(self.button)
         self.layout1.addWidget(self.canvas)
         
-        self.layout1.addWidget(self.lines)
-        self.layout1.addWidget(self.radius)
-        self.layout1.addWidget(self.factor)
-
+       
                 
         self.setLayout(self.layout1)
    
     # action called by thte push button
 
     def embedded_plot(self):
-        lines = int(self.lines.text())
-        m = int(self.factor.text())
+        lines = 50
+        m = 50
         n = 2
-        r = int(self.radius.text())
+        r = 10
         b = 360/m
         d = (-b)
         points = []
