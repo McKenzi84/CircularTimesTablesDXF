@@ -7,4 +7,5 @@ CCT stands for Circular Times Tables.
 
 CCT_DXF.py -> export CCT to .dxf
 CCT_PyQt5.py -> plot CCT in PyQT5 window
+CCT_PyQt5_ui.py -> GUI using .ui file ( prepared in Designer)
 
