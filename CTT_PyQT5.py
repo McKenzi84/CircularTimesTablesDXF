@@ -3,14 +3,6 @@ import matplotlib.pyplot as plt
 import math
 from ezdxf.addons.drawing import RenderContext, Frontend
 from ezdxf.addons.drawing.matplotlib import MatplotlibBackend
-
-
-lines = 50
-m = 50
-n = 2
-r = 100
-b = 360/m
-d = (-b)
 import sys
 from PyQt5.QtWidgets import QDialog, QApplication, QHBoxLayout, QLabel, QLineEdit, QMainWindow, QPushButton, QVBoxLayout
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -21,8 +13,6 @@ from ezdxf.addons.drawing import RenderContext, Frontend
 from ezdxf.addons.drawing.matplotlib import MatplotlibBackend
 from PyQt5 import QtWidgets
 import math
-
-
 class Window(QDialog):
      
     # constructor
@@ -54,7 +44,7 @@ class Window(QDialog):
         self.layout1.addWidget(self.factor)               
         self.setLayout(self.layout1)
 
-    def coordinates(self):      
+    def coordinates(self):      # coordinates calculation
         m =  int(self.points.text())       
         r = 10 # circle radius
         b = 360/m
